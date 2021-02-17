@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<center>
+<form action="{{route('calendar_index')}}" method="POST">
+    @csrf
+    <table>
+        <div class="input-group mb-3" style="width: 50%">
+            <p> Başlangıç Tarihi</p>
+            <input type="date"  name="release_date">
+        </div>
+
+        <div class="input-group mb-3" style="width: 50%">
+            <p>bitiş tarihi</p>
+            <input type="date"  name="due_date">
+        </div>
+
+        <div class="input-group mb-3" style="width: 50%">
+            <p>Takvimler</p>
+            <select class="bmd-form-group-sm" required name="Name" >
+                @foreach($category as $item)f
+                    <option value="{{$item->id}}">
+                        {{$item->Name}}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="input-group mb-3" style="width: 50%">
+            <p>Dönem</p>
+            <select class="bmd-form-group-sm" required name="Dönem" >
+                @foreach($period as $item)f
+                <option value="{{$item->id}}">
+                    {{$item->Dönem}}
+                </option>
+                @endforeach
+            </select>
+        </div>
+
+        <input type="submit" style="margin-top: 5px">
+
+
+    </table>
+</form>
+</center>
+
+</body>
+</html>
