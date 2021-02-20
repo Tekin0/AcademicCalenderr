@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f390815-3b03-4f21-a0b7-ecc4f03c3acb" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_09_112801_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_09_112801_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/calendar/calendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/calendar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="5f390815-3b03-4f21-a0b7-ecc4f03c3acb" name="Default Changelist" comment="first commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,6 +191,7 @@
       <workItem from="1613238161903" duration="7451000" />
       <workItem from="1613584045588" duration="4924000" />
       <workItem from="1613680441711" duration="1971000" />
+      <workItem from="1613844796886" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1613584179915</created>
@@ -206,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613584179915</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="asd">
+      <created>1613844846166</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613844846166</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +228,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="asd" />
+    <option name="LAST_COMMIT_MESSAGE" value="asd" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613244926329">
