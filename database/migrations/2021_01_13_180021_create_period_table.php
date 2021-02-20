@@ -15,7 +15,7 @@ class CreatePeriodTable extends Migration
     {
         Schema::create('period', function (Blueprint $table) {
             $table->id();
-            $table->string('Dönem');
+            $table->string('period');
             $table->timestamps();
         });
     }
