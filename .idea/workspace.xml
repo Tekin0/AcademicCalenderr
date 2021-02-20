@@ -19,18 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f390815-3b03-4f21-a0b7-ecc4f03c3acb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Calendar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Categories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Period.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_180021_create_period_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_09_112801_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_09_113348_create_info_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/calendar/calendar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" afterDir="false" />
+    <list default="true" id="5f390815-3b03-4f21-a0b7-ecc4f03c3acb" name="Default Changelist" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_09_112801_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_09_112801_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/calendar/calendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/calendar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,19 +37,6 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -215,8 +196,17 @@
       <workItem from="1612869884501" duration="9891000" />
       <workItem from="1612984917460" duration="2523000" />
       <workItem from="1613238161903" duration="7451000" />
-      <workItem from="1613584045588" duration="97000" />
+      <workItem from="1613584045588" duration="4924000" />
+      <workItem from="1613680441711" duration="1971000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1613584179915</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613584179915</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +226,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613244926329">
@@ -250,5 +242,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="538" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1611837395655" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1613584186452">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613584186452" />
   </component>
 </project>

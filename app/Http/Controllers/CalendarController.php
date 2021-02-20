@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Calendar;
 use App\Models\Categories;
+use App\Models\Info;
 use App\Models\Period;
-use App\Models\submenus;
 use Illuminate\Http\Request;
 
 class CalendarController extends Controller
@@ -23,9 +23,14 @@ class CalendarController extends Controller
             'due_date'=>\request('due_date'),
             'release_date'=>\request('release_date')
         ]);
-        $submenus = new submenus();
-        $submenus -> title = $request->title;
 
         return view('calendar.calendarList');
+    }
+
+    function getCalendar(){
+        $info = Info::orderBy('id' , 'ASC')->get();
+        $info[0] ->update([
+            'asda' => 'create period'
+        ]);
     }
 }

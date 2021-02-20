@@ -24,10 +24,10 @@
 
         <div class="input-group mb-3" style="width: 50%">
             <p>Takvimler</p>
-            <select class="bmd-form-group-sm" required name="Name" >
+            <select class="bmd-form-group-sm" required name="name" >
                 @foreach($category as $item)f
                     <option value="{{$item->id}}">
-                        {{$item->Name}}
+                        {{$item->name}}
                     </option>
                 @endforeach
             </select>
@@ -35,10 +35,10 @@
 
         <div class="input-group mb-3" style="width: 50%">
             <p>Dönem</p>
-            <select class="bmd-form-group-sm" required name="Dönem" >
-                @foreach($period as $item)f
+            <select class="bmd-form-group-sm" required name="period" >
+                @foreach($period as $item)
                 <option value="{{$item->id}}">
-                    {{$item->Dönem}}
+                    {{$item->period}}
                 </option>
                 @endforeach
             </select>

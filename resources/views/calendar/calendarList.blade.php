@@ -9,7 +9,9 @@
 </head>
 <body>
 
+@foreach($Calendar as $date)
 
+@endforeach
 
 </body>
 </html>
