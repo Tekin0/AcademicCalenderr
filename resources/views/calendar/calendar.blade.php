@@ -9,7 +9,7 @@
 </head>
 <body>
 <center>
-<form action="{{route('calendar_index')}}" method="POST">
+<form action="{{route('calendar_index')}}" enctype="multipart/form-data" method="POST">
     @csrf
     <table>
         <div class="input-group mb-3" style="width: 50%">
@@ -17,14 +17,15 @@
             <input type="date"  name="release_date">
         </div>
 
+
         <div class="input-group mb-3" style="width: 50%">
             <p>bitiş tarihi</p>
             <input type="date"  name="due_date">
         </div>
 
-        <div class="input-group mb-3" style="width: 50%">
+        <div class="input-group mb-3" >
             <p>Takvimler</p>
-            <select class="bmd-form-group-sm" required name="name" >
+            <select class="bmd-form-group-sm" required name="category" name="category" >
                 @foreach($category as $item)f
                     <option value="{{$item->id}}">
                         {{$item->name}}
@@ -35,7 +36,7 @@
 
         <div class="input-group mb-3" style="width: 50%">
             <p>Dönem</p>
-            <select class="bmd-form-group-sm" required name="period" >
+            <select class="bmd-form-group-sm" required name="period" name="period" >
                 @foreach($period as $item)
                 <option value="{{$item->id}}">
                     {{$item->period}}

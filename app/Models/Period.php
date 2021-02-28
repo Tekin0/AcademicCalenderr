@@ -11,8 +11,10 @@ class Period extends Model
     protected $table='period';
     protected $guarded=[];
 
-    function getInfo()
-    {
+    function getInfo(){
         return $this->hasMany('App\Models\Period', 'period_id', 'id');
+    }
+    function getCalendar(){
+        return $this->hasOne('App\Models\Calendar','period_id','id');
     }
 }

@@ -11,8 +11,12 @@ class Categories extends Model
     protected $table='categories';
     protected $guarded=['id'];
 
-    function getInfo()
-    {
+    function getInfo(){
         return $this->hasMany('App\Models\Info', 'category_id', 'id');
     }
+    function getCalendar(){
+        return $this->hasOne('App\Models\Calendar','category_id','id');
+    }
+
+
 }

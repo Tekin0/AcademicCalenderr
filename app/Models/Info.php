@@ -12,14 +12,14 @@ class Info extends Model
     protected $guarded=[];
 
 
-    function getDate(){
-        return $this->belongsTo('App\Models\Calendar', 'date_id', 'id');
-    }
-    function getCategory(){
-        return $this->belongsTo('App\Models\Category', 'category_id', 'id');
+    function getCategories(){
+        return $this->belongsTo('App\Models\Categories', 'category_id', 'id');
     }
     function getPeriod(){
         return $this->belongsTo('App\Models\Period', 'period_id', 'id');
+    }
+    function getDate(){
+    return $this->belongsTo('App\Models\Calendar', 'date_id', 'id');
     }
 }
 

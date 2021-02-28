@@ -16,8 +16,8 @@ class CreateInfoTable extends Migration
         Schema::create('info', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('date_id')->nullable();
             $table->unsignedBigInteger('period_id');
+            $table->unsignedBigInteger('date_id')->nullable();
             $table->text('title')->nullable();
             $table->text('content');
             $table->foreign('category_id')->references('id')->on('categories');

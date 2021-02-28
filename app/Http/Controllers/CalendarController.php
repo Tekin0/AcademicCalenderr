@@ -7,6 +7,7 @@ use App\Models\Categories;
 use App\Models\Info;
 use App\Models\Period;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class CalendarController extends Controller
 {
@@ -19,12 +20,22 @@ class CalendarController extends Controller
     }
 
     public function ind(Request $request){
-        calendar::create([
-            'due_date'=>\request('due_date'),
-            'release_date'=>\request('release_date')
-        ]);
+        $release_date = $request->release_date;  // release_date değeri
 
-        return view('calendar.calendarList');
+        $calendar = new Calendar();
+        $calendar->release_date = $request->release_date;
+        $calendar->due_date = $request->due_date;
+        $calendar->category_id = $request->category;
+        $calendar->period_id = $request->period;
+        $calendar->save();
+
+
+
+        $dates = Calendar::all();
+        $info = Info::orderBy('category_id','ASC')->get();
+        $lenght = collect($info)->count();
+        return view('calendar.calendarList',compact('dates','info','lenght'));
+
     }
 
     function getCalendar(){
@@ -33,4 +44,7 @@ class CalendarController extends Controller
             'asda' => 'create period'
         ]);
     }
+
+
+
 }

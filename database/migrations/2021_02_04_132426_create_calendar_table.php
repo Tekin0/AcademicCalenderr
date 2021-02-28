@@ -17,6 +17,11 @@ class CreateCalendarTable extends Migration
             $table->id();
             $table->date('release_date');
             $table->date('due_date')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('period_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('period_id')->references('id')->on('period');
+
             $table->timestamps();
         });
     }

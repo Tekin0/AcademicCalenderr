@@ -15,4 +15,13 @@ class Calendar extends Model
         return $this->hasOne('App\Models\Info', 'date_id', 'id');
     }
 
+    function getCategories(){
+        return $this->belongsTo('App\Models\Categories', 'category_id', 'id');
+    }
+    function getPeriod(){
+        return $this->belongsTo('App\Models\Period', 'period_id', 'id');
+    }
+
+
+
 }
