@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44bab211-589b-4da6-9cb1-29100f6046d2" name="Default Changelist" comment="second commit v.2">
+      <change afterPath="$PROJECT_DIR$/database/seeders/CalendarSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Calendar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Info.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Period.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Period.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_04_132426_create_calendar_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_04_132426_create_calendar_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_09_112801_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_112801_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_09_113348_create_info_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_09_113348_create_info_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/calendar/calendar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/calendar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +198,8 @@
       <workItem from="1614291879864" duration="910000" />
       <workItem from="1614353578493" duration="128000" />
       <workItem from="1614355394061" duration="1178000" />
-      <workItem from="1614515209229" duration="4741000" />
+      <workItem from="1614515209229" duration="5545000" />
+      <workItem from="1614623226628" duration="5319000" />
     </task>
     <task id="LOCAL-00001" summary="second commit v.2">
       <created>1613850010114</created>
@@ -214,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613850010114</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update v3">
+      <created>1614520717030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614520717030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +237,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="second commit" />
     <MESSAGE value="second commit v.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit v.2" />
+    <MESSAGE value="update v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="update v3" />
   </component>
 </project>
