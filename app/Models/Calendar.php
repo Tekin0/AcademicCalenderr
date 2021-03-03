@@ -11,6 +11,10 @@ class Calendar extends Model
     protected $table='calendar';
     protected $guarded=['id'];
 
+    protected $casts = [
+        'release_date' => 'datetime:Y-m-d',
+    ];
+
     function getInfo(){
         return $this->hasOne('App\Models\Info', 'date_id', 'id');
     }
