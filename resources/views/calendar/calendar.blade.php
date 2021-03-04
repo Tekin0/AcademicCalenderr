@@ -34,7 +34,7 @@
             </select>
         </div>
 
-        <div class="input-group mb-3" style="width: 50%">
+        <div class="input-group mb-3 " style="width: 50%">
             <p>Dönem</p>
             <select class="bmd-form-group-sm" required name="period" name="period" >
                 @foreach($period as $item)

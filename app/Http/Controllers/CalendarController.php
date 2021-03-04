@@ -376,7 +376,7 @@ class CalendarController extends Controller
                 $calendar->period_id = $request->period;
                 $calendar->save();
             }
-        }
+        } //genel akademik takvim
     elseif ($request->category == 2){
             if ($request->period ==1){
                 $calendar3 = Calendar::all()->first();
@@ -714,7 +714,7 @@ class CalendarController extends Controller
 
             }
 
-    }
+    } //tıp fakültesi
     elseif ($request->category == 3){
         if ($request->period ==1){
                 $calendar4 = Calendar::all()->first();
@@ -1037,7 +1037,7 @@ class CalendarController extends Controller
 
         }
 
-    }
+    } //diş hekimliği
     elseif ($request->category == 4){
 
         $calendar8 = Calendar::all()->first();
@@ -1100,7 +1100,7 @@ class CalendarController extends Controller
         $calendar->save();
 
 
-    }
+    } //yaz okulu
     elseif ($request->category == 5){
         if ($request->period ==1){
 
@@ -1341,7 +1341,7 @@ class CalendarController extends Controller
 
         }
 
-    }
+    } //lisansüstü
     elseif ($request->category == 6){
         if ($request->period ==1){
 
@@ -1510,7 +1510,7 @@ class CalendarController extends Controller
 
         }
 
-    }
+    } //kurumiçi
     elseif ($request->category == 7){
         if ($request->period ==1){
 
@@ -1701,7 +1701,7 @@ class CalendarController extends Controller
 
         }
 
-    }
+    } //kurumlararası
     elseif ($request->category == 8){
         if ($request->period ==1){
 
@@ -1835,7 +1835,7 @@ class CalendarController extends Controller
 
         }
 
-    }
+    } //merkezi yerleştirme
     elseif ($request->category == 9){
         if ($request->period ==1){
 
@@ -2004,7 +2004,7 @@ class CalendarController extends Controller
 
         }
 
-    }
+    } //çift anadal yandal
     elseif ($request->category == 10){
         if ($request->period ==1){
 
@@ -2096,7 +2096,7 @@ class CalendarController extends Controller
 
         }
 
-    }
+    } //özel öğrenci
     elseif ($request->category == 11){
         if ($request->period ==1){
 
@@ -2167,14 +2167,7 @@ class CalendarController extends Controller
 
         }
 
-    }
-
-
-        $calendar = Calendar::latest()->first(); // son Post kaydını aldım
-        $newDate = $calendar->release_date->addDays(13); // son postun kayıt tarihine 11 gün eklediğim yeni bir tarih oluşturdum
-
-        dd($newDate);
-
+    } //önlisans ek sınav
 
 
 

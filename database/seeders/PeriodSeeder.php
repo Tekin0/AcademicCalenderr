@@ -15,7 +15,6 @@ class PeriodSeeder extends Seeder
      */
     public function run()
     {
-
         Period::create(['period' => 'Guz']);
         Period::create(['period' => 'Bahar']);
 
