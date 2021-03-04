@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/index',[\App\Http\Controllers\CalendarController::class,'updateInfo'])->name('calendar_index');
 Route::post('/index',[\App\Http\Controllers\CalendarController::class,'ind'])->name('calendar_index');
 Route::get('/',[\App\Http\Controllers\CalendarController::class,'index'])->name('home');
 Route::get('/getCalendar' , [\App\Http\Controllers\CalendarController::class, 'getCalendar']);

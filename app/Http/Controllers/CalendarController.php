@@ -43,6 +43,15 @@ class CalendarController extends Controller
         $calendar->period_id = $request->period;
         $calendar->save();
 
+        $calendarss = Calendar::where('category_id', '=', 1)
+                                                ->where('period_id','=',1)
+                                                ->orderBy('id' , 'ASC')
+                                                ->get('release_date');
+
+
+
+
+
         //------------------------------------------------------------------
 
         $calendar1 = Calendar::all()->first();
@@ -2171,6 +2180,10 @@ class CalendarController extends Controller
 
 
 
+
+
+
+
         $dates = Calendar::all();
         $info = Info::orderBy('category_id','ASC')->get();
         $lenght = collect($info)->count();
@@ -2178,16 +2191,358 @@ class CalendarController extends Controller
 
     }
 
-    function getCalendar(){
-        $info = Info::orderBy('id' , 'ASC')->get();
-        $info[0] ->update([
-            'asda' => 'create period'
-        ]);
+    function updateInfo(){
+//------------------------------
+        if (Info::where('category_id', '=', 1)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 1)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+            $j = count($infoss);
+            for($i=0;$i<$j;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 1)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 1)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+            $j = count($infoss);
+            for($i=0;$i<$j;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//------------------------------
+        if (Info::where('category_id', '=', 2)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 2)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+            $a = count($infoss);
+            for($i=0;$i<$a;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 2)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 2)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+            $a = count($infoss);
+            for($i=0;$i<$a;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//-------------------------------
+       if (Info::where('category_id', '=', 3)
+           ->where('period_id','=',1))
+       {
+           $infoss = Info::where('category_id', '=', 3)
+               ->where('period_id','=',1)
+               ->orderBy('id' , 'ASC')->get();
+
+
+           $b = count($infoss);
+           for($i=0;$i<$b;$i++) {
+               $infoss[$i]->update([
+                   'date_id' => $i+1
+               ]);
+           }
+       }
+       elseif (Info::where('category_id', '=', 3)
+           ->where('period_id','=',2))
+       {
+           $infoss = Info::where('category_id', '=', 3)
+               ->where('period_id','=',2)
+               ->orderBy('id' , 'ASC')->get();
+
+
+           $b = count($infoss);
+           for($i=0;$i<$b;$i++) {
+               $infoss[$i]->update([
+                   'date_id' => $i+1
+               ]);
+           }
+       }
+
+//-------------------------------
+        if (Info::where('category_id', '=', 4)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 4)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $c = count($infoss);
+            for($i=0;$i<$c;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 4)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 4)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $c = count($infoss);
+            for($i=0;$i<$c;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//-------------------------------
+        if(Info::where('category_id', '=', 5)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 5)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $d = count($infoss);
+            for($i=0;$i<$d;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 5)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 5)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $d = count($infoss);
+            for($i=0;$i<$d;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//---------------------------------------
+        if(Info::where('category_id', '=', 6)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 6)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $e = count($infoss);
+            for($i=0;$i<$e;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 6)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 6)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $e = count($infoss);
+            for($i=0;$i<$e;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//------------------------------------
+        if(Info::where('category_id', '=', 7)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 7)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $f = count($infoss);
+            for($i=0;$i<$f;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 7)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 7)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $f = count($infoss);
+            for($i=0;$i<$f;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//--------------------------------
+        if(Info::where('category_id', '=', 8)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 8)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $g = count($infoss);
+            for($i=0;$i<$g;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 8)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 8)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $g = count($infoss);
+            for($i=0;$i<$g;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//--------------------------------
+        if(Info::where('category_id', '=', 9)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 9)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $h = count($infoss);
+            for($i=0;$i<$h;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 9)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 9)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $h = count($infoss);
+            for($i=0;$i<$h;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//------------------------------
+        if(Info::where('category_id', '=', 10)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 10)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $k = count($infoss);
+            for($i=0;$i<$k;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 10)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 10)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $k = count($infoss);
+            for($i=0;$i<$k;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+
+//-------------------------------
+        if(Info::where('category_id', '=', 11)
+            ->where('period_id','=',1))
+        {
+            $infoss = Info::where('category_id', '=', 11)
+                ->where('period_id','=',1)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $l = count($infoss);
+            for($i=0;$i<$l;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+        elseif (Info::where('category_id', '=', 11)
+            ->where('period_id','=',2))
+        {
+            $infoss = Info::where('category_id', '=', 11)
+                ->where('period_id','=',2)
+                ->orderBy('id' , 'ASC')->get();
+
+
+            $l = count($infoss);
+            for($i=0;$i<$l;$i++) {
+                $infoss[$i]->update([
+                    'date_id' => $i+1
+                ]);
+            }
+        }
+//----------------------------------
+
     }
 
-    function createDate(Request $request){
-
-    }
 
 
 

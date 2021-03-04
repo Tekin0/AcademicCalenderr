@@ -26,7 +26,7 @@
         <div class="input-group mb-3" >
             <p>Takvimler</p>
             <select class="bmd-form-group-sm" required name="category" name="category" >
-                @foreach($category as $item)f
+                @foreach($category as $item)
                     <option value="{{$item->id}}">
                         {{$item->name}}
                     </option>
@@ -42,6 +42,7 @@
                     {{$item->period}}
                 </option>
                 @endforeach
+
             </select>
         </div>
 
