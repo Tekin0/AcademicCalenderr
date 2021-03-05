@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::post('/index',[\App\Http\Controllers\CalendarController::class,'updateInfo'])->name('calendar_index');
-Route::post('/index',[\App\Http\Controllers\CalendarController::class,'ind'])->name('calendar_index');
-Route::get('/',[\App\Http\Controllers\CalendarController::class,'index'])->name('home');
-Route::get('/getCalendar' , [\App\Http\Controllers\CalendarController::class, 'getCalendar']);
+Route::post('/index',[CalendarController::class,'ind'])->name('calendar_index');
+Route::get('/',[CalendarController::class,'index'])->name('home');
+Route::get('/getCalendar' , [CalendarController::class, 'getCalendar']);

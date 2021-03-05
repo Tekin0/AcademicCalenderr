@@ -14,7 +14,7 @@
     <table>
         <div class="input-group mb-3" style="width: 50%">
             <p> Başlangıç Tarihi</p>
-            <input type="date"  name="release_date">
+            <input type="date"  name="release_date" required>
         </div>
 
 

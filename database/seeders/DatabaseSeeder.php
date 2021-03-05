@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        $this->call([
-           PeriodSeeder::class,
+      $this->call([
+            PeriodSeeder::class,
             CategorySeeder::class,
-
+            InfoSeeder::class,
         ]);
     }
 }

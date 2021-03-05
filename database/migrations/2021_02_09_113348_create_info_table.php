@@ -19,7 +19,7 @@ class CreateInfoTable extends Migration
             $table->unsignedBigInteger('period_id');
             $table->unsignedBigInteger('date_id')->nullable();
             $table->text('title')->nullable();
-            $table->text('content');
+            $table->text('content')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('period_id')->references('id')->on('period');
             $table->foreign('date_id')->references('id')->on('calendar');

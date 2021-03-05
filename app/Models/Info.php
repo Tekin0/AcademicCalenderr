@@ -9,7 +9,8 @@ class Info extends Model
 {
     use HasFactory;
     protected $table ='info';
-    protected $guarded=[];
+    protected $guarded=['id'];
+    protected $fillable = ['date_id'];
 
 
     function getCategories(){
