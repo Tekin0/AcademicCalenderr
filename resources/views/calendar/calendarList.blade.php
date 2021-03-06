@@ -43,7 +43,7 @@
 
 
 <center>
-    @for($i=0;$i<$lenght;$i++)
+    @for($i=0;$i<$length;$i++)
 
 
 

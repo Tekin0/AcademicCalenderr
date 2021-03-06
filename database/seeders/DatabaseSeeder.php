@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             PeriodSeeder::class,
             CategorySeeder::class,
             InfoSeeder::class,
+            PatternSeeder::class
         ]);
     }
 }
