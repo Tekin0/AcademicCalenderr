@@ -129,5 +129,461 @@ Dil Yeterlik Sınavı',
             ]);
         }
 
+        $tipFakultesiTakvimContent =[
+
+            'Ders yılı başlangıcı ',
+            'Yabancı dil dersleri için muafiyet sınavı (hazırlık programı olmayan bölümler için)',
+            'Muafiyet Başvuru İçin Son Tarih',
+            'ARA TATİL',
+            'Yılsonu derslerin bitişi',
+            'Mazeret Sınavları',
+            'Türkçe Final Sınavı',
+            'Yabancı Dil (İngilizce) Final Sınavı',
+            '(Pratik) Genel Sınavlar',
+            '(Teorik) Genel Sınavlar',
+            'Türkçe Bütünleme Sınavı',
+            'Yabancı Dil (İngilizce) Bütünleme Sınavı ',
+            '(Pratik) Bütünleme Sınavları',
+            '(Teorik) Bütünleme Sınavlar',
+
+            'Ders yılı başlangıcı',
+            'Ders yılı başlangıcı',
+            'ARA TATİL',
+            'Yılsonu derslerin bitişi',
+            '(Pratik-Teorik) Mazeret Sınavları',
+            'Atatürk İlkeleri ve İnkılap Tarihi Final sınavı',
+            'Yabancı Dil (İngilizce) Final Sınavı ',
+            '(Pratik) Genel Sınavlar',
+            '(Teorik) Genel Sınavlar',
+            'Atatürk İlkeleri ve İnkılap Tarihi Bütünleme sınavı',
+            'Yabancı Dil (İngilizce) Bütünleme Sınavı',
+            '(Pratik) Bütünleme Sınavları ',
+            '(Teorik) Bütünleme Sınavları',
+
+            'Ders yılı başlangıcı ',
+            'Formatif Sınav',
+            'ARA TATİL ',
+            'Yılsonu derslerin bitişi',
+            '(Pratik) Mazeret Sınavları',
+            '(Teorik) Mazeret Sınavları',
+            '(Teorik) Genel Sınavlar',
+            '(Teorik) Bütünleme Sınavları',
+
+            'Ders yılı başlangıcı ',
+            'Formatif Sınav ',
+            'ARA TATİL',
+            'Ders yılı bitişi ',
+            'Bütünleme Sınavları ',
+
+            'Ders yılı başlangıcı',
+            'ARA TATİL ',
+            'Ders yılı bitişi',
+            'Bütünleme Sınavları',
+
+            'İnternlik dönemi başlangıcı',
+            '2019-2020 Mezuniyet ',
+        ];
+
+        for($i=0;$i<46;$i++){
+            DB::table('info')->insert([
+                'category_id'=>2,
+                'period_id'=>1 or 2,
+                'content'=>$tipFakultesiTakvimContent[$i],
+            ]);
+        }
+
+        $disHekimligiFakultesiTakvimContent =[
+            'Ders yılı başlangıcı',
+            'Yabancı dil dersleri için muafiyet sınavı (hazırlık programı olmayan bölümler için)',
+            'Muafiyet Başvuru İçin Son Tarih',
+            'ARA TATİL',
+            'Yılsonu derslerin bitişi',
+            'Mazeret Sınavları',
+            'Türkçe Final Sınavı',
+            'Yabancı Dil (İngilizce) Final Sınavı',
+            '(Pratik) Genel Sınavlar',
+            '(Teorik) Genel Sınavlar',
+            'Türkçe Bütünleme Sınavı',
+            'Yabancı Dil (İngilizce) Bütünleme Sınavı ',
+            '(Pratik) Bütünleme Sınavları',
+            '(Teorik) Bütünleme Sınavları ',
+
+            'Ders yılı başlangıcı ',
+            'ARA TATİL',
+            'Yılsonu derslerin bitişi',
+            '(Pratik-Teorik) Mazeret Sınavları',
+            'Atatürk İlkeleri ve İnkılap Tarihi Final Sınavı',
+            'Yabancı Dil (İngilizce) Final Sınavı ',
+            '(Pratik) Genel Sınavlar ',
+            '(Teorik) Genel Sınavlar ',
+            'Atatürk İlkeleri ve İnkılap Tarihi Bütünleme Sınavı',
+            'Yabancı Dil (İngilizce) Bütünleme Sınavı ',
+            '(Pratik) Bütünleme Sınavları ',
+            '(Teorik) Bütünleme Sınavları',
+
+            'Ders yılı başlangıcı',
+            'ARA TATİL ',
+            'Yılsonu derslerin bitişi ',
+            '(Pratik) Mazeret Sınavları',
+            '(Teorik) Mazeret Sınavları',
+            '(Teorik) Genel Sınavlar',
+            '(Teorik) Bütünleme Sınavları',
+
+            'Ders yılı başlangıcı ',
+            'ARA TATİL',
+            'Ders yılı bitişi ',
+            '(Teorik) Genel Sınavlar',
+            'Bütünleme Sınavları ',
+
+            'Ders yılı başlangıcı ',
+            'ARA TATİL',
+            'Ders yılı bitişi ',
+            '(Teorik) Genel Sınavlar',
+            'Bütünleme Sınavları',
+            'Mezuniyet ',
+        ];
+        for($i=0;$i<44;$i++) {
+            DB::table('info')->insert([
+                'category_id' => 3,
+                'period_id' => 1 or 2 ,
+                'content' => $disHekimligiFakultesiTakvimContent[$i],
+            ]);
+        }
+        $yazOkuluTakvimContent =[
+          'Yaz okulunda açılması öngörülen derslerin ve ders sorumlularının ilgili
+Dekanlığa/Müdürlüğe bildirilmesi ',
+            'Açılması öngörülen derslerin Fakülte/Yüksekokul/Meslek Yüksekokulları
+tarafından web sayfalarında ilanı',
+            'Ders ücretlerinin yatırılması ve kayıt için bölümlere başvuru yapılması',
+            'Yaz Okulu kesin (ders) kayıtlarının yapılması ',
+            'Danışmanların ders kayıtlarını onaylaması ',
+            'Derslerin Başlaması',
+            'Derslerin Bitişi',
+            'Yaz Okulu Genel Sınavlarının yapılması ',
+            'Sınav sonuçlarının Otomasyondan ilanı ve sonuçlandırılması için son tarih',
+        ];
+        for($i=0;$i<9;$i++) {
+            DB::table('info')->insert([
+                'category_id' => 4,
+                'period_id' => 1 or 2,
+                'content' => $yazOkuluTakvimContent[$i],
+            ]);
+        }
+
+        $lisanustuTakvimGuzContent =[
+            'Katkı payı ve öğrenim ücretlerinin ödenmesi ',
+            'Ders kayıtları ',
+            'Özel öğrenci statüsü başvuru dönemi ',
+            'Danışmanların ders kayıtlarını onaylaması',
+            'Özel öğrenci kayıtları ',
+            'Güz yarıyılı başlangıcı (derslerin başlaması) ',
+            'Öğrencilerin danışman onayını alarak dersten çekilme ve ekleme yapması',
+            'Geçici izinli sayılmak için başvurunun son günü',
+            'Ara sınav dönemi',
+            'Ara sınav ve mazeret sınav notlarının otomasyondan ilanı için son tarih',
+            'Güz yarıyılı sonu',
+            'Genel sınav dönemi (Seminer Sunumu Dahil)',
+            'Genel sınav notlarının otomasyonda ilan edilmesi için son tarih',
+            'Bütünleme sınav dönemi',
+            'Bütünleme sınav notlarının otomasyonda ilan edilmesi için son tarih ',
+            'Tezlerin enstitülere teslimi için son tarih (Tezlerin ciltlenmiş son hali)',
+            'Seminer kitapçıklarının enstitülere teslimi için son tarih',
+        ];
+        for($i=0;$i<17;$i++){
+            DB::table('info')->insert([
+                'category_id'=>5,
+                'period_id'=>1,
+                'content'=>$lisanustuTakvimGuzContent[$i],
+            ]);
+        }
+
+        $lisanustuTakvimBaharContent =[
+            'Katkı payı ve öğrenim ücretlerinin ödenmesi ',
+            'Özel öğrenci statüsü başvuru dönemi ',
+            'Ders kayıtları',
+            'Bahar yarıyılı başlangıcı (derslerin başlaması) ',
+            'Danışmanların ders kayıtlarını onaylaması ',
+            'Özel öğrenci kayıtları ',
+            'Öğrencilerin danışman onayını alarak dersten çekilme ve ekleme yapması',
+            'Geçici izinli sayılmak için başvurunun son günü',
+            'Ara sınav dönemi',
+            'Ara sınav ve mazeret sınav notlarının otomasyondan ilanı için son tarih',
+            'Bahar yarıyılı sonu',
+            'Genel sınav dönemi (Seminer Sunumu Dahil)',
+            'Genel sınav notlarının otomasyonda ilan edilmesi için son tarih',
+            'Bütünleme sınav dönemi ',
+            'Bütünleme sınav notlarının otomasyonda ilan edilmesi için son tarih',
+            'Seminer kitapçıklarının enstitülere teslimi için son tarih',
+            'Tezlerin enstitülere teslimi için son tarih (Tezlerin ciltlenmiş son hali)',
+        ];
+        for($i=0;$i<17;$i++){
+            DB::table('info')->insert([
+                'category_id'=>5,
+                'period_id'=>2,
+                'content'=>$lisanustuTakvimBaharContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansKiciYatayGecisTakvimGuzContent =[
+            'Kontenjanların birimlerden istenmesi',
+            'Kontenjanların Öğrenci İşleri Daire Başkanlığına bildirilmesi ',
+            'Kontenjanlar ve başvuru şartlarının Fırat Üniversitesi internet sitesinde
+ilan edilmesi ',
+            'Başvuru dönemi',
+            'Başvuruların değerlendirilmesi ',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin intibak formlarının
+hazırlanması ve Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin Fırat Üniversitesi internet
+sitesinde ilan edilmesi',
+            'Asıl listedeki öğrencilerin kayıtları',
+            'Kayıt hakkı kazanan yedek öğrencilerin Fırat Üniversitesi internet
+sitesinde ilanı',
+            'Yedek listedeki öğrencilerin kayıtları',
+            'Kayıt yapan asıl ve yedek öğrencilerin muafiyetlerinin otomasyona
+girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<12;$i++){
+            DB::table('info')->insert([
+                'category_id'=>6,
+                'period_id'=>1,
+                'content'=> $onlisansVeLisansKiciYatayGecisTakvimGuzContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansKiciYatayGecisTakvimBaharContent =[
+            'Kontenjanların birimlerden istenmesi ',
+            'Kontenjanların Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kontenjanlar ve başvuru şartlarının F.Ü. internet sitesinde ilan edilmesi',
+            'Başvuru dönemi ',
+            'Başvuruların değerlendirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin intibak formlarının
+hazırlanması ve Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin F.Ü. internet sitesinde ilan
+edilmesi',
+            'Asıl listedeki öğrencilerin kayıtları',
+            'Kayıt hakkı kazanan yedek öğrencilerin F.Ü. internet sitesinde ilanı',
+            'Yedek listedeki öğrencilerin kayıtları',
+            'Kayıt yapan asıl ve yedek öğrencilerin muafiyetlerinin otomasyona
+girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<12;$i++){
+            DB::table('info')->insert([
+                'category_id'=>6,
+                'period_id'=>2,
+                'content'=> $onlisansVeLisansKiciYatayGecisTakvimBaharContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansKarasiYatayGecisTakvimGuzContent =[
+            'İlave kontenjanların birimlerden istenmesi',
+            'İlave kontenjanların Öğrenci İşleri Daire Başkanlığına bildirilmesi ',
+            'İlave kontenjanların YÖK’e bildirilmesi',
+            'Kontenjan ve başvuru şartlarının Fırat Üniversitesi internet sitesinden ilan edilmesi',
+            'Başvuru dönemi',
+            'Başvuruların değerlendirilmesi',
+            'Devlet Konservatuvarı başvuranlar için Özel Yetenek Sınavı',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin intibak formlarının hazırlanması ve
+Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin Fırat Üniversitesi internet sitesinde
+ilan edilmesi ',
+            'Asıl listedeki öğrencilerin kayıtları',
+            'Kayıt hakkı kazanan yedek öğrencilerin Fırat Üniversitesi internet sayfasından ilanı',
+            'Yedek listedeki öğrencilerin kayıtları',
+            'Kayıt yapan asıl ve yedek öğrencilerin muafiyetlerinin otomasyona girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<14;$i++){
+            DB::table('info')->insert([
+                'category_id'=>7,
+                'period_id'=>1,
+                'content'=> $onlisansVeLisansKarasiYatayGecisTakvimGuzContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansKarasiYatayGecisTakvimBaharContent =[
+            'İlave kontenjanların birimlerden istenmesi',
+            'İlave kontenjanların Öğrenci İşleri Daire Başkanlığına bildirilmesi ',
+            'İlave kontenjanların YÖK’e bildirilmesi',
+            'Kontenjan ve başvuru şartlarının Fırat Üniversitesi internet sitesinde ilan edilmesi',
+            'Başvuru dönemi',
+            'Başvuruların değerlendirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin intibak formlarının hazırlanması ve
+Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin Fırat Üniversitesi internet sitesinde
+ilan edilmesi',
+            'Asıl listedeki öğrencilerin kayıtları',
+            'Kayıt hakkı kazanan yedek öğrencilerin Fırat Üniversitesi internet sitesinde ilanı',
+            'Yedek listedeki öğrencilerin kayıtları',
+            'Kayıt yapan asıl ve yedek öğrencilerin muafiyetlerinin otomasyona girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<13;$i++){
+            DB::table('info')->insert([
+                'category_id'=>7,
+                'period_id'=>2,
+                'content'=> $onlisansVeLisansKarasiYatayGecisTakvimBaharContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansPuanileYatayGecisTakvimGuzContent =[
+            'Başvuru dönemi',
+            'Başvuruların değerlendirilmesi',
+            'Kayıt hakkı kazanan öğrencilerin intibak formlarının hazırlanması ve Öğrenci
+İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan öğrencilerin F.Ü. internet sitesinde ilan edilmesi',
+            'Öğrencilerin kayıtları',
+            'Kayıt yapan öğrencilerin muafiyetlerinin otomasyona girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<7;$i++){
+            DB::table('info')->insert([
+                'category_id'=>8,
+                'period_id'=>1,
+                'content'=> $onlisansVeLisansPuanileYatayGecisTakvimGuzContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansPuanileYatayGecisTakvimBaharContent =[
+            'Kontenjanların birimlerden istenmesi',
+            'Kontenjanların Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kontenjanlar ve başvuru şartlarının F.Ü. internet sitesinde ilan edilmesi',
+            'Başvuru dönemi',
+            'Başvuruların değerlendirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin intibak formlarının
+hazırlanması ve Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan öğrencilerin F.Ü. internet sitesinde ilan edilmesi',
+            'Asıl listedeki öğrencilerin kayıtları',
+            'Kayıt hakkı kazanan yedek listedeki öğrencileri F.Ü. internet sitesinde ilan
+edilmesi',
+            'Yedek listedeki öğrencilerin kayıtları',
+            'Kayıt yapan asıl ve yedek öğrencilerin muafiyetlerinin otomasyona girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<12;$i++){
+            DB::table('info')->insert([
+                'category_id'=>8,
+                'period_id'=>2,
+                'content'=> $onlisansVeLisansPuanileYatayGecisTakvimBaharContent[$i],
+            ]);
+        }
+
+        $ciftAnadalVeYandalBasvuruKabulTakvimGuzContent =[
+            'Kontenjanlarının birimlerden istenmesi',
+            'Kontenjanların Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kontenjan ve başvuru şartlarının F.Ü. internet sitesinde ilan edilmesi ',
+            'Başvuru dönemi',
+            'Başvuruların değerlendirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin intibak formlarının hazırlanması ve
+Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin F.Ü. internet sitesinde ilan edilmesi',
+            'Asıl listedeki öğrencilerin kayıtları',
+            'Kayıt hakkı kazanan yedek öğrencilerin F.Ü. internet sitesinde ilanı',
+            'Yedek listedeki öğrencilerin kayıtları',
+            'Kayıt yapan asıl ve yedek öğrencilerin muafiyetlerinin otomasyona girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<12;$i++){
+            DB::table('info')->insert([
+                'category_id'=>9,
+                'period_id'=>1,
+                'content'=> $ciftAnadalVeYandalBasvuruKabulTakvimGuzContent[$i],
+            ]);
+        }
+
+        $ciftAnadalVeYandalBasvuruKabulTakvimBaharContent =[
+            'Kontenjanların birimlerden istenmesi',
+            'Kontenjanların Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kontenjan ve başvuru şartlarının F.Ü. internet sitesinde ilan edilmesi',
+            'Başvuru dönemi',
+            'Başvuruların değerlendirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin intibak formlarının hazırlanması ve
+Öğrenci İşleri Daire Başkanlığına bildirilmesi',
+            'Kayıt hakkı kazanan asıl ve yedek öğrencilerin F.Ü. internet sitesinde ilan edilmesi',
+            'Asıl listedeki öğrencilerin kayıtları',
+            'Kayıt hakkı kazanan yedek öğrencilerin F.Ü. internet sitesinde ilanı',
+            'Yedek listedeki öğrencilerin kayıtları',
+            'Kayıt yapan asıl ve yedek öğrencilerin muafiyetlerinin otomasyona girilmesi',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<12;$i++){
+            DB::table('info')->insert([
+                'category_id'=>9,
+                'period_id'=>2,
+                'content'=> $ciftAnadalVeYandalBasvuruKabulTakvimBaharContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansOzelOgrBasvuruKabulTakvimGuzContent =[
+            'Üniversitemiz öğrencilerinin özel öğrenci olarak başka bir üniversiteye gitmek
+için Fak./Y.Okul/Konservatuvar/MYO’larına başvuru dönemi',
+            'Üniversitemizde özel öğrenci statüsünden yararlanmak üzere diğer üniversite
+öğrencilerinin ilgili birimlere (Fak./Y.Okul/Konservatuvar/MYO) başvuru dönemi',
+            'Özel öğrenci başvurularının ilgili kurullarda değerlendirilip kararın Rektörlük
+Makamına gönderilmesi',
+            'Özel öğrenci kararlarının Senato’da görüşülmesi',
+            'Özel öğrenci kayıtları',
+            'Danışmanlarıyla birlikte ders kayıtlarını yapmaları',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<7;$i++){
+            DB::table('info')->insert([
+                'category_id'=>10,
+                'period_id'=>1,
+                'content'=> $onlisansVeLisansOzelOgrBasvuruKabulTakvimGuzContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansOzelOgrBasvuruKabulTakvimBaharContent =[
+            'Üniversitemizde özel öğrenci statüsünden yararlanmak üzere diğer üniversite
+öğrencilerinin ve başka yükseköğretim kurumuna gitmek isteyen Üniversitemiz
+öğrencilerinin ilgili birimlerine (Fak./Y.Okul/Konservatuvar/MYO) başvuru
+dönemi',
+            'Özel öğrenci başvurularının ilgili kurullarda değerlendirilip kararın Rektörlük
+Makamına gönderilmesi',
+            'Özel öğrenci kararlarının Senato’da görüşülmesi',
+            'Özel öğrencilerin kayıtları',
+            'Danışmanlarıyla birlikte ders kayıtlarını yapmaları ',
+            'Derslerin başlaması',
+        ];
+        for($i=0;$i<6;$i++){
+            DB::table('info')->insert([
+                'category_id'=>10,
+                'period_id'=>2,
+                'content'=> $onlisansVeLisansOzelOgrBasvuruKabulTakvimBaharContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansEkSinavTakvimGuzContent =[
+            'Başvuruların alınması',
+            '1. Ek Sınavların Yapılması',
+            '1. Ek sınav notlarının otomasyondan ilanı için son tarih',
+            'II. Ek Sınavların Yapılması',
+            'II. Ek sınav notlarının otomasyondan ilanı için son tarih',
+        ];
+        for($i=0;$i<5;$i++){
+            DB::table('info')->insert([
+                'category_id'=>11,
+                'period_id'=>1,
+                'content'=> $onlisansVeLisansEkSinavTakvimGuzContent[$i],
+            ]);
+        }
+
+        $onlisansVeLisansEkSinavTakvimBaharContent =[
+            'Başvuruların alınması ',
+            '2. Ek Sınavların Yapılması ',
+            '2. Ek sınav notlarının otomasyondan ilanı için son tarih',
+            'II. Ek Sınavların Yapılmas',
+            'II. Ek sınav notlarının otomasyondan ilanı için son tarih ',
+        ];
+        for($i=0;$i<5;$i++){
+            DB::table('info')->insert([
+                'category_id'=>11,
+                'period_id'=>2,
+                'content'=> $onlisansVeLisansEkSinavTakvimBaharContent[$i],
+            ]);
+        }
+
     }
 }
