@@ -9,6 +9,8 @@ use App\Models\Pattern;
 use App\Models\Period;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Yajra\DataTables\DataTables;
+use function GuzzleHttp\Promise\all;
 
 class CalendarController extends Controller
 {
@@ -80,4 +82,26 @@ class CalendarController extends Controller
             }
         }
     }
+
+
+    public function listData(){
+        $question_packages = Info::query()->where('category_id',1);
+
+       return Datatables::of($question_packages)
+            ->addColumn('Detail', function ($question_packages){
+                return '<a class="btn btn-success" href="'. route('calendar_index', [$question_packages->id]) .'">'.'Detail</a>';
+
+            })
+            ->addColumn('Update', function ($question_packages){
+                return '<a class="btn btn-primary" href="'. route('calendar_index', [$question_packages->id]) .'">'.'Update</a>';
+
+            })
+            ->addColumn('Delete', function ($question_packages){
+                return '<a class="btn btn-danger" href="'. route('calendar_index', [$question_packages->id]) .'">'.'Delete</a>';
+
+            }
+            )->rawColumns(['Detail','Update','Delete'])->make();
+    }
+
+
 }

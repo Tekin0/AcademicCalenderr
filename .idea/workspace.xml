@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44bab211-589b-4da6-9cb1-29100f6046d2" name="Default Changelist" comment="second commit v.2">
+      <change afterPath="$PROJECT_DIR$/app/Models/Pattern.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_06_180252_create_pattern_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/PatternSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/InfoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/InfoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CalendarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/calendar/calendarList.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +215,11 @@
       <workItem from="1614942139050" duration="1342000" />
       <workItem from="1614966641026" duration="1513000" />
       <workItem from="1614968348112" duration="737000" />
-      <workItem from="1614969292755" duration="6335000" />
+      <workItem from="1614969292755" duration="6614000" />
+      <workItem from="1615034903158" duration="2043000" />
+      <workItem from="1615037097461" duration="8460000" />
+      <workItem from="1615050043302" duration="4561000" />
+      <workItem from="1615054703444" duration="2104000" />
     </task>
     <task id="LOCAL-00001" summary="second commit v.2">
       <created>1613850010114</created>
@@ -240,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614889988066</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="v4">
+      <created>1614975725674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614975725674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +281,22 @@
     <MESSAGE value="update v3" />
     <MESSAGE value="update v3.01" />
     <MESSAGE value="v3,2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v3,2" />
+    <MESSAGE value="v4" />
+    <option name="LAST_COMMIT_MESSAGE" value="v4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/CalendarController.php</url>
+          <line>61</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\CalendarController" />
+            <option name="methodName" value="updateInfo" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

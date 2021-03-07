@@ -7,80 +7,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <title>Info List</title>
 </head>
 <body>
+<section style="padding-top: 60px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table id="questions" class="table table-borderless datatable table-striped table-earning">
+                    <thead>
+                    <tr>
+
+                        <th>id</th>
+                        <th>Category</th>
+                        <th>Period</th>
+                        <th>Date</th>
+                        <th>title</th>
+                        <th>content</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    {{--
-    <table class="table table-dark">
-    <thead>
-    <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Release_Date</th>
-        <th scope="col">Due_Date</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach($dates as $date)
-    <tr>
-
-        <th scope="row">{{$date->id}}</th>
-        <td>{{$date->release_date}}</td>
-        <td>{{$date->due_date}}</td>
-
-    </tr>
-    @endforeach
-    </tbody>
-</table>
-    --}}
+<script id="script">
+    table = $('#questions').DataTable({
+        order: [
+            [0,'ASC']
+        ],
+        processing: true,
+        serverSide: true,
+        ajax:"{!! route('listData')!!}", //hangi kontrollerden gelecek
+        columns: [
+            {data: 'id'},
+            {data: 'category_id'},
+            {data: 'period_id'},
+            {data: 'date_id'},
+            {data: 'title'},
+            {data: 'content'},
+            {data: 'Update'},
+            {data: 'Delete'},
+        ]
+    });
+</script>
 
 </body>
 
-
-<center>
-    @for($i=0;$i<$length;$i++)
-
-
-
-    @if($info[$i]->category_id == 1 )
-            {{$info[$i]->getCategories->name}}
-        {{$info[$i]->getPeriod->period}}
-
-    @elseif($info[$i]->category_id == 2 )
-            {{'id 2 '}}
-            {{$info[$i]->title}}
-
-
-
-        @elseif($info[$i]->category_id == 3 )
-            {{'id 3 '}}
-            {{$info[$i]->title}}
-
-
-        @elseif($info[$i]->category_id == 4 )
-            {{'id 4 '}}
-            {{$info[$i]->title}}
-        @endif
-
-
-
-    <br><br>
-
-
-
-
-
-
-    @endfor
-
-
-
-
-
-</center>
 </html>

@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::post('/index',[CalendarController::class,'ind'])->name('calendar_index');
+
+Route::get('/listData',[CalendarController::class,'listData'])->name('listData');
+Route::post('/listData',[CalendarController::class,'listData'])->name('listData');
+
+//Route::get('/list',[CalendarController::class,'list'])->name('list');
+
 Route::get('/',[CalendarController::class,'index'])->name('home');
 Route::get('/getCalendar' , [CalendarController::class, 'getCalendar']);
