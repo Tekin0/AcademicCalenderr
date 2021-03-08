@@ -27,16 +27,25 @@
                     <thead>
                     <tr>
 
-                        <th>id</th>
-                        <th>Category</th>
-                        <th>Period</th>
-                        <th>Date</th>
-                        <th>title</th>
-                        <th>content</th>
-                        <th>update</th>
-                        <th>delete</th>
+                        <th>Kategori Adı</th>
+                        <th>Periyod</th>
+                        <th>Tarih</th>
+                        <th>Başlık</th>
+                        <th>İçerik</th>
+                        <th>Güncelle</th>
                     </tr>
                     </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Kategori Adı</th>
+                        <th>Periyod</th>
+                        <th>Tarih</th>
+                        <th>Başlık</th>
+                        <th>İçerik</th>
+                        <th>Güncelle</th>
+
+                    </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
@@ -51,16 +60,14 @@
         ],
         processing: true,
         serverSide: true,
-        ajax:"{!! route('listData')!!}", //hangi kontrollerden gelecek
+        ajax:"{!! route('listData',[$category_id,$period_id])!!}", //hangi kontrollerden gelecek
         columns: [
-            {data: 'id'},
-            {data: 'category_id'},
-            {data: 'period_id'},
-            {data: 'date_id'},
+            {data: 'category_name'},
+            {data: 'period_name'},
+            {data: 'release_date'},
             {data: 'title'},
             {data: 'content'},
             {data: 'Update'},
-            {data: 'Delete'},
         ]
     });
 </script>

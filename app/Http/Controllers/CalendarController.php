@@ -52,11 +52,13 @@ class CalendarController extends Controller
         else{
             return 'HATAAAA';
         }
+        $category_id = $request->category;
+        $period_id = $request->period;
 
         $dates = Calendar::all();
         $info = Info::orderBy('category_id', 'ASC')->get();
         $length = collect($info)->count();
-        return view('calendar.calendarList', compact('dates', 'info', 'length'));
+        return view('calendar.calendarList', compact('dates', 'info', 'length','period_id','category_id'));
     }
 
     public function updateInfo(){
@@ -84,24 +86,28 @@ class CalendarController extends Controller
     }
 
 
-    public function listData(){
-        $question_packages = Info::query()->where('category_id',1);
+    public function listData($category = 1, $period = 1){
+//        $question_packages = array();
+//        for($i=1;$i<=11;$i++){
+//            for($j=1;$j<=2;$j++){
+//                array_push($question_packages,Info::where('category_id',$i)->where('period_id',$j)->get());
+//            }
+//        }
+            $question_packages = Info::where('category_id',$category)->where('period_id',$period)->get();
+            return Datatables::of($question_packages)
+                ->editColumn('category_name',function ($data){
+                    return $data->getCategories->name;
+                })
+                ->editColumn('period_name',function ($data){
+                    return $data->getPeriod->period;
+                })
+                ->editColumn('release_date',function ($data){
+                    return date("d F", strtotime($data->getDate->release_date));
+                })
+                ->addColumn('Update', function ($question_packages){
+                    return '<a class="btn btn-primary" href="'. route('calendar_index', [$question_packages->id]) .'">'.'Update</a>';
 
-       return Datatables::of($question_packages)
-            ->addColumn('Detail', function ($question_packages){
-                return '<a class="btn btn-success" href="'. route('calendar_index', [$question_packages->id]) .'">'.'Detail</a>';
-
-            })
-            ->addColumn('Update', function ($question_packages){
-                return '<a class="btn btn-primary" href="'. route('calendar_index', [$question_packages->id]) .'">'.'Update</a>';
-
-            })
-            ->addColumn('Delete', function ($question_packages){
-                return '<a class="btn btn-danger" href="'. route('calendar_index', [$question_packages->id]) .'">'.'Delete</a>';
-
-            }
-            )->rawColumns(['Detail','Update','Delete'])->make();
-    }
-
-
+                }
+                )->rawColumns(['Update','category_name','period_name','release_date'])->make(true);
+        }
 }
